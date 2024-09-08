@@ -1,0 +1,105 @@
+<html>
+
+	<head>
+		<title>BMI Calculator:Health Awareness System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=shadow-multiple">
+	</head>
+	<link rel="stylesheet" type="text/css" href="bmiStyle.css">
+	
+	<body style="background-color:darkgreen">
+	
+	<div class="w3-container w3-darkgreen">
+     <h1 class="w3-xxxmedium font-effect-shadow-multiple w3-text-white" align='center'><b>
+	BMI Calculator
+	</div>
+	
+	<nav>
+	<script src="navigation.js"></script>
+		<ul>
+		<li><a class="active" href="index.html">Home</a></li>
+		<li><a href="healthInfopage.html">Health Info</a></li>
+		<li><a href="BMICalculator.html">BMI Calculator</a></li>
+		</ul>
+	</nav>
+	<br>
+	
+	<div style="text-align: center;">
+	<img src="https://i.pinimg.com/736x/f4/1d/94/f41d94c58120241b5a42a0425dae2b64.jpg" width="700" height="500" alt="BMI Picture">
+	</div>
+	
+	<h3 style="text-align:center">What is BMI?</h3>
+		<p>Body Mass Index (BMI) is a numerical value derived from a person's weight and height. 
+		It is a commonly used tool to categorize individuals into different weight status categories, 
+		which can help assess whether they are underweight, normal weight, overweight, or obese. BMI 
+		is calculated using the following formula:<br>
+		<b>BMI = Weight (kg)/ Height (m)2</b><br>
+​		Alternatively, in pounds and inches, the formula is:<br>
+		<b>BMI = (Weight (lb) × 703) / (Height (in)2)</b></p>
+	
+	<h3 style="text-align:center">BMI Categories:</h3>
+		<div style="text-align: center;">
+			<img src="https://i.pinimg.com/564x/47/38/a7/4738a70ff259307eb7728e8975059da4.jpg" width="500" height="500" alt="BMI Category Picture">
+		</div>
+		
+		<p>According to the World Health Organization (WHO) and other health organizations, BMI is categorized as follows:<br>
+		<b>1. Underweight:</b> BMI is less than  18.5 <br><b>2. Normal weight:</b> BMI 18.5 – 24.9<br><b>3. Overweight:</b> BMI 25 – 29.9<br>
+		<b>4. Obesity:</b><br><b>Class 1 (Moderate):</b> BMI 30 – 34.9<br><b>Class 2 (Severe):</b> BMI 35 – 39.9<br><b>Class 3 (Very Severe or Morbid Obesity):</b> BMI ≥ 40</p>
+​
+	<h1 style="text-align:center">BMI Calculator</h1>
+	<form>
+		<label for="weight">Weight (kg):</label>
+		<input type="number" id="weight" required><br><br>
+		<label for="height">Height (m):</label>
+		<input type="number" id="height" required><br><br>
+		<button type="button" onclick="calculateBMI()">Calculate BMI</button>
+	</form>
+	<p id="result"></p>
+
+	<script>
+		function calculateBMI() {
+			const weight = document.getElementById("weight").value;
+			const height = document.getElementById("height").value;
+
+		if (weight && height) {
+			const bmi = weight / (height ** 2);
+			const result = document.getElementById("result");
+			result.style.textAlign = "center";
+			
+			if (bmi < 18.5) {
+			result.textContent = `Your BMI is ${bmi.toFixed(2)}. You are underweight.`;
+			} else if (bmi < 25) {
+			result.textContent = `Your BMI is ${bmi.toFixed(2)}. You are normal weight.`;
+			} else if (bmi < 30) {
+			result.textContent = `Your BMI is ${bmi.toFixed(2)}. You are overweight.`;
+			} else {
+			result.textContent = `Your BMI is ${bmi.toFixed(2)}. You are obese.`;
+			}
+		} else {
+        alert("Please enter both weight and height.");
+		}
+		}
+  </script>
+  
+	<h3 style="text-align:center">Limitations of BMI:</h3>
+		<p>1. Doesn’t Differentiate Between Fat and Muscle: BMI does not account for muscle mass, bone density, or body composition. 
+		A very muscular person may have a high BMI but not have excess body fat.<br>
+		2. Doesn’t Account for Fat Distribution: BMI does not indicate where fat is distributed on the body, which can be important 
+		for assessing health risks.<br>
+		3. Varies by Age and Sex: BMI does not adjust for differences in body composition between males and females or for variations
+		across different age groups.<br></p>
+	
+	<h3 style="text-align:center">Usefulness of BMI:</h3>
+		<p>Screening Tool: BMI is a useful screening tool for identifying individuals who may be at risk of health problems due to 
+		excessive or insufficient body fat.<br>
+		Population Studies: It is commonly used in epidemiological studies to assess the prevalence of obesity and related health 
+		issues within populations.<br><br></p>
+		<h3 style="text-align:center">Conclusion:</h3>
+		<p>For a more comprehensive assessment of health, BMI should be considered alongside other measurements and indicators, 
+		such as waist circumference, body fat percentage, and overall lifestyle and health factors.</p>
+	
+</body>
+</html>

@@ -1,0 +1,52 @@
+body{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 18px;
+	text-align:justify;
+	line-height:1.0;
+	background-color:1A5319;
+	color:white;
+}
+
+h1{
+	text-align:center;
+	font-family:"Georgia", Serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:80AF81;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: D6EFD8;
+}
+
+.active {
+  background-color: 508D4E;
+}
+
+ol.listingBaru{
+	list-style-type:upper-roman;
+	text-align:justify;
+}
+
+
+
+
+
+
